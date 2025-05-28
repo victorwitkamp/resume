@@ -1,3 +1,9 @@
+### IP-SecurITy b.v.
+
+2025 FEB - 2025 JUN
+
+Network Engineer
+
 ### OFFICEGRIP B.V.
 ```Fortinet```
 ```HPE Aruba```
@@ -16,7 +22,7 @@
 
 2022 APR - 2025 JAN
 
-Network/automation engineer
+Network/automation Engineer
 
 Advising the Support department on network issues, setting up processes for Support regarding
 our network portfolio, executing network projects at customers, consultancy and responsible for
