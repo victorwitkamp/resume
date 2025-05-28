@@ -1,3 +1,11 @@
+### Juniper Networks Certified Associate, Junos (JNCIA-Junos)
+
+2025 MAY
+
+[Juniper Networks Certified Associate, Junos (JNCIA-Junos) - Credly](https://www.credly.com/badges/858e4f1f-781c-4a29-9eb2-0675529f72d7)
+
+![Juniper Networks Certified Associate, Junos (JNCIA-Junos) Badge](JNCIA-Junos.png)
+
 ### Microsoft Certified: Power Platform Developer Associate (PL-400)
 
 2024 SEPT
