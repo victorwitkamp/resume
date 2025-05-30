@@ -10,13 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Generate PDF using md-to-pdf
+      # Install Pandoc and LaTeX (required for PDF generation)
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra
+
+      # Convert Markdown to PDF using Pandoc
       - name: Convert Markdown to PDF
         run: |
-            npm install -g md-to-pdf
-            export PUPPETEER_ARGS="--no-sandbox"
-            md-to-pdf src/RESUME.md --stylesheet src/PDF.css
-            mv src/RESUME.pdf RESUME.pdf
+          pandoc src/RESUME.md -o RESUME.pdf --css=src/PDF.css
 
       # Upload PDF as an artifact
       - name: Upload PDF
