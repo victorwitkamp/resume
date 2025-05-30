@@ -12,9 +12,10 @@ jobs:
 
       # Generate PDF using md-to-pdf
       - name: Convert Markdown to PDF
-        run: |
-          npm install -g md-to-pdf
-          md-to-pdf src/resume.md --stylesheet src/resume.css --pdf-file resume.pdf
+      run: |
+        npm install -g md-to-pdf
+        md-to-pdf src/resume.md --stylesheet src/resume.css
+        mv src/resume.pdf resume.pdf
 
       # Upload PDF as an artifact
       - name: Upload PDF
