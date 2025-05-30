@@ -14,12 +14,12 @@ jobs:
       - name: Convert Markdown to PDF
         run: |
             npm install -g md-to-pdf
-            md-to-pdf src/resume.md --stylesheet src/resume.css
-            mv src/resume.pdf resume.pdf
+            md-to-pdf src/RESUME.md --stylesheet src/PDF.css
+            mv src/RESUME.pdf RESUME.pdf
 
       # Upload PDF as an artifact
       - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
-          name: resume-pdf
-          path: resume.pdf
+          name: RESUME-pdf
+          path: RESUME.pdf
