@@ -10,6 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Update README
+        uses: abhinav/stitchmd-action@v1
+        with:
+            mode: write
+            summary: src/RESUME.md
+            output: RESUME.md
+
       # Install Pandoc and LaTeX (required for PDF generation)
       - name: Install dependencies
         run: |
@@ -19,7 +26,7 @@ jobs:
       # Convert Markdown to PDF using Pandoc
       - name: Convert Markdown to PDF
         run: |
-          pandoc src/RESUME.md -o RESUME.pdf --css=src/PDF.css
+          pandoc RESUME.md -o RESUME.pdf --css=src/PDF.css
 
       # Upload PDF as an artifact
       - name: Upload PDF
