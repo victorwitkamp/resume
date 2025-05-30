@@ -1,0 +1,31 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Generate PDF using md-to-pdf
+      - name: Convert Markdown to PDF
+        run: |
+          npm install -g md-to-pdf
+          md-to-pdf src/resume.md --stylesheet src/resume.css --pdf-file resume.pdf
+
+      # Deploy to GitHub Pages (your existing step)
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+
+      # Upload PDF as an artifact
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume-pdf
+          path: resume.pdf
