@@ -28,6 +28,15 @@ jobs:
           summary: src/RESUME.md
           output: README.md
 
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra
+
+      - name: Convert Markdown to PDF
+        run: |
+          pandoc src/RESUME.md -o RESUME.pdf --css=src/PDF.css
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -36,6 +45,10 @@ jobs:
         with:
           source: ./
           destination: ./_site
+
+      - name: Copy PDF to site
+        run: |
+          cp RESUME.pdf _site/RESUME.pdf
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
