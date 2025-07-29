@@ -50,6 +50,9 @@ jobs:
           source: ./
           destination: ./_site
 
+      - name: Fix permissions for _site directory
+        run: sudo chown -R $(id -u):$(id -g) _site
+
       - name: Copy PDF to site
         run: |
           cp RESUME.pdf _site/RESUME.pdf
