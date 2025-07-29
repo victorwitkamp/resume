@@ -31,11 +31,11 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra
+          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
 
       - name: Convert Markdown to PDF
         run: |
-          pandoc RESUME.md -o RESUME.pdf --css=src/PDF.css
+          pandoc README.md -o RESUME.pdf --css=src/PDF.css
 
       - name: Insert PDF link after
         run: |
