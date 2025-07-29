@@ -29,9 +29,7 @@ jobs:
           output: README.md
 
       - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+        run: sudo apt-get update && sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
 
       - name: Convert Markdown to PDF
         run: |
