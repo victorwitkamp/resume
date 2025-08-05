@@ -28,6 +28,13 @@ jobs:
           summary: src/RESUME.md
           output: README.md
 
+      # Cache apt lists to speed up apt-get update
+      - name: Cache apt lists
+        uses: actions/cache@v4
+        with:
+          path: /var/lib/apt/lists
+          key: ${{ runner.os }}-apt-lists-${{ hashFiles('**/.github/workflows/jekyll-gh-pages.yml') }}
+
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
 
