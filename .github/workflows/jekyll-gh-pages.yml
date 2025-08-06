@@ -3,6 +3,7 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: ["main"]
+
   workflow_dispatch:
 
 permissions:
@@ -18,10 +19,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Update README from source
+      - name: Update README
         uses: abhinav/stitchmd-action@v1
         with:
           mode: write
@@ -35,24 +35,20 @@ jobs:
           path: /var/lib/apt/lists
           key: ${{ runner.os }}-apt-lists-${{ hashFiles('**/.github/workflows/jekyll-gh-pages.yml') }}
 
-      - name: Install system dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
 
       - name: Convert Markdown to PDF
         run: |
-          echo "Converting README.md to PDF..."
-          pandoc README.md -o RESUME.pdf --css=src/PDF.css --metadata title="Resume - Victor Witkamp"
-          echo "PDF generation completed successfully"
+          pandoc README.md -o RESUME.pdf --css=src/PDF.css
 
-      - name: Insert PDF download link
+      - name: Insert PDF link after
         run: |
           sed -i '/^# Resume$/a\
           [Download my Resume PDF](https://victorwitkamp.github.io/resume/RESUME.pdf)
           ' README.md
 
-      - name: Setup GitHub Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
@@ -61,13 +57,14 @@ jobs:
           source: ./
           destination: ./_site
 
-      - name: Fix permissions and copy assets
-        run: |
-          sudo chown -R $(id -u):$(id -g) _site
-          cp RESUME.pdf _site/RESUME.pdf
-          echo "Build artifacts prepared successfully"
+      - name: Fix permissions for _site directory
+        run: sudo chown -R $(id -u):$(id -g) _site
 
-      - name: Upload Pages artifact
+      - name: Copy PDF to site
+        run: |
+          cp RESUME.pdf _site/RESUME.pdf
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
   deploy:
