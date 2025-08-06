@@ -30,11 +30,11 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y pandoc wkhtmltopdf
 
-      - name: Convert Markdown to HTML with CSS
-        run: pandoc README.md -o RESUME.html --standalone --css=src/PDF.css
+      - name: Convert Markdown to HTML with ATS-friendly CSS
+        run: pandoc README.md -o RESUME.html --standalone --css=src/PDF_ATS.css --metadata title="Victor Witkamp - Resume"
 
-      - name: Convert HTML to PDF (enable local file access)
-        run: wkhtmltopdf --enable-local-file-access RESUME.html RESUME.pdf
+      - name: Convert HTML to PDF (ATS-optimized)
+        run: wkhtmltopdf --enable-local-file-access --page-size Letter --orientation Portrait --margin-top 15mm --margin-bottom 15mm --margin-left 15mm --margin-right 15mm RESUME.html RESUME.pdf
 
       - name: Insert PDF link after
         run: |

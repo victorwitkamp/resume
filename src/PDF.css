@@ -1,4 +1,6 @@
-/* Professional PDF Layout for Resume */
+/* Original Professional PDF Layout for Resume */
+/* This is the original styling - kept for reference */
+/* Use PDF_ATS.css for ATS-friendly version */
 @page {
     margin: 1in;
     size: letter;
