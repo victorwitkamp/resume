@@ -11,7 +11,7 @@ baseurl: "/resume"
 
 # SEO and social media
 github_username: victorwitkamp
-linkedin_username: victor-witkamp
+linkedin_username: victorwitkamp
 
 # Build settings
 markdown: kramdown
