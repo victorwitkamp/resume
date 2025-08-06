@@ -28,7 +28,6 @@ jobs:
           summary: src/RESUME.md
           output: README.md
 
-      # Cache apt lists to speed up apt-get update
       - name: Cache apt lists
         uses: actions/cache@v4
         with:
@@ -36,11 +35,13 @@ jobs:
           key: ${{ runner.os }}-apt-lists-${{ hashFiles('**/.github/workflows/jekyll-gh-pages.yml') }}
 
       - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+        run: sudo apt-get update && sudo apt-get install -y pandoc wkhtmltopdf
 
-      - name: Convert Markdown to PDF
-        run: |
-          pandoc README.md -o RESUME.pdf --css=src/PDF.css
+      - name: Convert Markdown to HTML with CSS
+        run: pandoc README.md -o RESUME.html --standalone --css=src/PDF.css
+
+      - name: Convert HTML to PDF
+        run: wkhtmltopdf RESUME.html RESUME.pdf
 
       - name: Insert PDF link after
         run: |
@@ -61,8 +62,7 @@ jobs:
         run: sudo chown -R $(id -u):$(id -g) _site
 
       - name: Copy PDF to site
-        run: |
-          cp RESUME.pdf _site/RESUME.pdf
+        run: cp RESUME.pdf _site/RESUME.pdf
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
