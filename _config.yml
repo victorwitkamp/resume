@@ -4,3 +4,29 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 
 title: "RESUME OF VICTOR WITKAMP" # Replace "[Your Name]" with your first and last name.
+description: "Professional resume and portfolio of Victor Witkamp - Network Engineer & Business Automation Specialist"
+author: "Victor Witkamp"
+url: "https://victorwitkamp.github.io"
+baseurl: "/resume"
+
+# SEO and social media
+github_username: victorwitkamp
+linkedin_username: victorwitkamp
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude files from build
+exclude:
+  - CONTRIBUTING.md
+  - LICENSE
+  - README.md
+  - src/assets/images/
+  - scripts/
+  - .gitignore
+
+# Include files in build
+include:
+  - _pages
