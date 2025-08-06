@@ -3,7 +3,6 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: ["main"]
-
   workflow_dispatch:
 
 permissions:
@@ -40,8 +39,8 @@ jobs:
       - name: Convert Markdown to HTML with CSS
         run: pandoc README.md -o RESUME.html --standalone --css=src/PDF.css
 
-      - name: Convert HTML to PDF
-        run: wkhtmltopdf RESUME.html RESUME.pdf
+      - name: Convert HTML to PDF (enable local file access)
+        run: wkhtmltopdf --enable-local-file-access RESUME.html RESUME.pdf
 
       - name: Insert PDF link after
         run: |
