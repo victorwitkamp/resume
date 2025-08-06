@@ -1,0 +1,33 @@
+# Build and temporary files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+*.pdf
+*.html
+
+# Ruby/Bundler
+.bundle/
+vendor/
+Gemfile.lock
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*~
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Node.js (if used)
+node_modules/
+npm-debug.log*
+
+# Scripts and temporary files
+scripts/validate.sh
