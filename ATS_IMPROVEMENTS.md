@@ -52,6 +52,24 @@ This document outlines the improvements made to the PDF generation for better AT
 4. **Format Compatibility**: Standard formatting works with all major ATS platforms
 5. **File Size Reduction**: Smaller PDF files (48KB vs 109KB) load faster in ATS systems
 
+## Additional Recommendations for Maximum ATS Compatibility
+
+### Contact Information
+Consider adding contact information at the top of the resume for better ATS parsing:
+```markdown
+# Victor Witkamp
+**Email:** your.email@example.com | **Phone:** +31 6 XXXX XXXX
+**LinkedIn:** linkedin.com/in/yourprofile | **Location:** City, Country
+```
+
+### Keywords Optimization
+- Use standard job titles and industry keywords
+- Include both abbreviated and full forms of technologies (e.g., "AI" and "Artificial Intelligence")
+- Use action verbs in work experience descriptions
+
+### Section Headers
+The current section headers (Education, Certifications, Work Experience) are ATS-friendly and should be maintained.
+
 ## Testing
 
 The improvements have been tested by generating both versions:
