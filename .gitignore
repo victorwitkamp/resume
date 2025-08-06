@@ -1,0 +1,12 @@
+# Build artifacts - should not be committed
+README.md
+index.md
+RESUME.pdf
+_site/
+
+# Jekyll cache
+.jekyll-cache/
+.sass-cache/
+
+# Ruby/Gem files
+Gemfile.lock
