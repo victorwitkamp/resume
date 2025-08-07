@@ -34,7 +34,7 @@ jobs:
         run: pandoc README.md -o RESUME.html --standalone --css=src/PDF_ATS.css --metadata title="Victor Witkamp - Resume"
 
       - name: Convert HTML to PDF (ATS-optimized)
-        run: wkhtmltopdf --enable-local-file-access --page-size Letter --orientation Portrait --margin-top 15mm --margin-bottom 15mm --margin-left 15mm --margin-right 15mm RESUME.html RESUME.pdf
+        run: wkhtmltopdf --enable-local-file-access --page-size A4 --orientation Portrait --margin-top 15mm --margin-bottom 15mm --margin-left 15mm --margin-right 15mm RESUME.html RESUME.pdf
 
       - name: Insert PDF link after
         run: |

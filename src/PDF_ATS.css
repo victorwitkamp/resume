@@ -3,7 +3,7 @@
 
 @page {
     margin: 0.75in;
-    size: letter;
+    size: A4;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
     font-family: 'Arial', 'Calibri', 'Helvetica', sans-serif;
     line-height: 1.4;
     color: #000000; /* Pure black for best contrast and readability */
-    max-width: 8.5in;
+    max-width: 8.27in;
     margin: 0 auto;
     padding: 0;
     font-size: 11pt; /* Standard readable size */
