@@ -1,5 +1,7 @@
 # Resume
 
+[Download my Resume PDF](https://victorwitkamp.github.io/resume/RESUME.pdf) (ATS-Friendly)
+
 ## Education
 
 ### NETWORK AND MEDIA MANAGEMENT (MBO 4 BBL) - ROC DA VINCI COLLEGE

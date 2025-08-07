@@ -1,0 +1,25 @@
+# Build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Temporary PDF/HTML test files
+RESUME_*.pdf
+RESUME_*.html
+*_test.pdf
+*_test.html
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local development
+.bundle/
+vendor/
