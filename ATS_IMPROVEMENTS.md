@@ -42,7 +42,6 @@ This document outlines the improvements made to the PDF generation for better AT
 ## File Structure
 
 - `src/PDF_ATS.css` - New ATS-friendly stylesheet (now default)
-- `src/PDF.css` - Original styling (kept for reference)
 
 ## Benefits for ATS Systems
 
