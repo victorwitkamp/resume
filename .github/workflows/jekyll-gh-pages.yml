@@ -39,7 +39,7 @@ jobs:
       - name: Insert PDF link after
         run: |
           sed -i '/^# Resume$/a\
-          [Download my Resume PDF](https://victorwitkamp.github.io/resume/RESUME.pdf)
+          [Download my Resume PDF](https://victorwitkamp.github.io/resume/RESUME.pdf) (ATS-friendly)
           ' README.md
 
       - name: Setup Pages
