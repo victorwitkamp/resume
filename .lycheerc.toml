@@ -30,13 +30,13 @@ exclude = [
     "http://10..*",
     "http://172..*",
     "http://192.168..*",
-
+    
     # Skip file:// links (local files)
     "file://.*",
-
+    
     # Skip mailto links
     "mailto:.*",
-
+    
     # Skip relative links (they'll be checked in context)
     "^[^/]*\\.md$",
     "^[^/]*\\.png$",
@@ -46,9 +46,3 @@ exclude = [
 
 # Include only these file types
 include = ["*.md"]
-
-# Enable caching
-cache = true
-
-# Verbose output
-verbose = true
