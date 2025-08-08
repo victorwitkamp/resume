@@ -2,5 +2,33 @@ remote_theme: pages-themes/slate@v0.2.0 # this line adds the slate theme of Jeky
 
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
+- jekyll-seo-tag # SEO optimization plugin
+- jekyll-sitemap # XML sitemap generation
 
-title: "RESUME OF VICTOR WITKAMP" # Replace "[Your Name]" with your first and last name.
+# Site configuration
+title: "Resume of Victor Witkamp" # Changed from all-caps for accessibility and readability
+description: "Professional resume of Victor Witkamp - Experienced Network Engineer and Business Innovations professional with over 10 years in IT infrastructure, automation, and network security."
+author: Victor Witkamp
+
+# GitHub Pages configuration
+url: "https://victorwitkamp.github.io" # Your GitHub Pages domain
+baseurl: "/resume" # Repository name for project pages
+
+# SEO and social metadata
+lang: en
+twitter:
+  username: # Add your Twitter handle if you have one
+  card: summary
+linkedin:
+  username: # Add your LinkedIn username if you want
+
+# Additional SEO settings
+google_site_verification: # Add Google Search Console verification code if needed
+webmaster_verifications:
+  google: # Google verification code
+  bing: # Bing verification code
+
+# Social media and professional links
+social_links:
+  github: victorwitkamp
+  linkedin: # Add your LinkedIn profile name
