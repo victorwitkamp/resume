@@ -1,0 +1,43 @@
+{
+  "name": "victor-witkamp-resume",
+  "version": "1.0.0",
+  "description": "Professional resume of Victor Witkamp with automated PDF generation and Jekyll deployment",
+  "scripts": {
+    "lint": "markdownlint src/*.md --config .markdownlint.json",
+    "lint:fix": "markdownlint src/*.md --config .markdownlint.json --fix",
+    "spell": "cspell \"src/*.md\" --config .cspell.json",
+    "links": "lychee src/*.md --config .lycheerc.toml",
+    "quality": "npm run lint && npm run spell && npm run links",
+    "build:readme": "stitchmd -o README.md src/RESUME.md",
+    "build:html": "pandoc README.md -o RESUME.html --standalone --css=src/PDF_ATS.css --metadata title=\"Victor Witkamp - Resume\"",
+    "build:pdf": "wkhtmltopdf --enable-local-file-access --page-size A4 --orientation Portrait --margin-top 15mm --margin-bottom 15mm --margin-left 15mm --margin-right 15mm RESUME.html RESUME.pdf",
+    "build": "npm run build:readme && npm run build:html && npm run build:pdf",
+    "serve": "jekyll serve --livereload",
+    "clean": "rm -f README.md RESUME.html RESUME.pdf && jekyll clean",
+    "test": "npm run quality && npm run build && test -s RESUME.pdf && echo '✅ All tests passed'"
+  },
+  "keywords": [
+    "resume",
+    "cv",
+    "professional",
+    "markdown",
+    "jekyll",
+    "pdf",
+    "automation"
+  ],
+  "author": "Victor Witkamp",
+  "license": "MIT",
+  "devDependencies": {
+    "markdownlint-cli": "^0.37.0",
+    "cspell": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/victorwitkamp/resume.git"
+  },
+  "homepage": "https://victorwitkamp.github.io/resume/",
+  "private": true
+}
