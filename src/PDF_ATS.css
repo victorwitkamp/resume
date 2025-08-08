@@ -110,18 +110,20 @@ em {
 
 /* Hide images and figures in ATS-optimized version */
 /* ATS systems often ignore images, so we make them minimal */
-img {
-    /* Hide certification badges for ATS */
-    /* display: none; */
-}
 
-figure {
-    display: none; /* Hide figure elements */
+/* Hide certification badges for ATS */
+/* img {
+    display: none;
+} */
+
+/* Hide figure elements */
+/* figure {
+    display: none;
 }
 
 figcaption {
     display: none;
-}
+} */
 
 /* Clean work experience styling */
 h3 strong {
@@ -131,10 +133,10 @@ h3 strong {
 }
 
 /* Remove decorative elements */
-hr {
-    /* Remove visual separators that ATS can't parse */
-    /* display: none; */
-}
+/* Remove visual separators that ATS can't parse */
+/* hr {
+    display: none;
+} */
 
 /* Simple list formatting */
 ul, ol {
