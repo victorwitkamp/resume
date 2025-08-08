@@ -74,27 +74,27 @@ p {
 /* Technical skills - simplified for ATS parsing */
 code {
     /* Remove background colors and borders that confuse ATS */
-    background-color: transparent;
+    /* background-color: transparent;
     border: none;
     border-radius: 0;
-    padding: 0;
+    padding: 0; */
     font-family: 'Arial', 'Calibri', sans-serif; /* Use same font as body */
     font-size: 11pt;
-    margin: 0;
-    display: inline;
+    /* margin: 0; */
+    /* display: inline; */
     color: #000000;
-    font-weight: normal;
+    /* font-weight: normal; */
 }
 
 /* Simplify code blocks to plain text for ATS */
 pre {
-    background-color: transparent;
+    /* background-color: transparent;
     border: none;
     padding: 0;
-    margin: 0;
+    margin: 0; */
     font-family: 'Arial', 'Calibri', sans-serif;
     color: #000000;
-    white-space: normal; /* Allow wrapping */
+    /* white-space: normal; */
 }
 
 /* Clear emphasis styling */
