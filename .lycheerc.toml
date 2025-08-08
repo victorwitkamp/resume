@@ -43,6 +43,3 @@ exclude = [
     "^[^/]*\\.jpg$",
     "^[^/]*\\.gif$"
 ]
-
-# Include only these file types
-include = ["*.md"]
