@@ -1,0 +1,54 @@
+# Lychee link checker configuration
+
+# Maximum number of concurrent network requests
+max_concurrency = 10
+
+# Accept invalid certificates (useful for self-signed certs)
+insecure = false
+
+# User agent string
+user_agent = "lychee/resume-checker"
+
+# Timeout for network requests (in seconds)
+timeout = 20
+
+# Retry failed requests
+max_retries = 3
+
+# HTTP methods to check
+method = "get"
+
+# Accept range for HTTP status codes
+accept = [200, 201, 204, 206, 300, 301, 302, 303, 304, 307, 308]
+
+# Exclude URLs matching these patterns
+exclude = [
+    # Skip localhost and private IPs
+    "http://localhost.*",
+    "http://127.0.0.1.*",
+    "http://0.0.0.0.*",
+    "http://10..*",
+    "http://172..*",
+    "http://192.168..*",
+
+    # Skip file:// links (local files)
+    "file://.*",
+
+    # Skip mailto links
+    "mailto:.*",
+
+    # Skip relative links (they'll be checked in context)
+    "^[^/]*\\.md$",
+    "^[^/]*\\.png$",
+    "^[^/]*\\.jpg$",
+    "^[^/]*\\.gif$"
+]
+
+# Include only these file types
+include = ["*.md"]
+
+# Cache results for this duration (in seconds)
+cache = 3600
+
+# Verbose output
+verbose = true

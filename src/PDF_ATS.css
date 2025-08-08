@@ -111,7 +111,8 @@ em {
 /* Hide images and figures in ATS-optimized version */
 /* ATS systems often ignore images, so we make them minimal */
 img {
-    display: none; /* Hide certification badges for ATS */
+    /* Hide certification badges for ATS */
+    /* display: none; */
 }
 
 figure {
@@ -131,7 +132,8 @@ h3 strong {
 
 /* Remove decorative elements */
 hr {
-    display: none; /* Remove visual separators that ATS can't parse */
+    /* Remove visual separators that ATS can't parse */
+    /* display: none; */
 }
 
 /* Simple list formatting */
