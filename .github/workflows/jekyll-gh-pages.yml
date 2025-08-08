@@ -20,12 +20,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Quality Gates
+      # Get changed files for conditional processing
+      - name: Get changed markdown files
+        id: changed-files
+        uses: tj-actions/changed-files@v41
+        with:
+          files: 'src/*.md'
+
+      # Quality Gates - optimized for performance
+      - name: Cache Node.js dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install markdownlint-cli
         run: npm install -g markdownlint-cli
 
-      - name: Run markdownlint on source files
-        run: markdownlint src/*.md --config .markdownlint.json
+      - name: Run markdownlint on changed files
+        if: steps.changed-files.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: markdownlint ${{ steps.changed-files.outputs.all_changed_files || 'src/*.md' }} --config .markdownlint.json
         continue-on-error: true
 
       - name: Install lychee (link checker)
@@ -35,6 +51,14 @@ jobs:
 
       - name: Check links in source files
         run: lychee src/*.md --config .lycheerc.toml
+        continue-on-error: true
+
+      # Spell checking
+      - name: Install cspell
+        run: npm install -g cspell
+
+      - name: Check spelling in source files
+        run: cspell "src/*.md" --config .cspell.json
         continue-on-error: true
 
       - name: Update README
@@ -47,11 +71,39 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y pandoc wkhtmltopdf
 
+      # Cache PDF artifacts for performance
+      - name: Cache PDF artifacts
+        id: cache-pdf
+        uses: actions/cache@v4
+        with:
+          path: |
+            RESUME.pdf
+            RESUME.html
+          key: pdf-${{ hashFiles('src/**/*.md', 'src/PDF_ATS.css', 'README.md') }}
+          restore-keys: |
+            pdf-
+
       - name: Convert Markdown to HTML with ATS-friendly CSS
+        if: steps.cache-pdf.outputs.cache-hit != 'true'
         run: pandoc README.md -o RESUME.html --standalone --css=src/PDF_ATS.css --metadata title="Victor Witkamp - Resume"
 
       - name: Convert HTML to PDF (ATS-optimized)
+        if: steps.cache-pdf.outputs.cache-hit != 'true'
         run: wkhtmltopdf --enable-local-file-access --page-size A4 --orientation Portrait --margin-top 15mm --margin-bottom 15mm --margin-left 15mm --margin-right 15mm RESUME.html RESUME.pdf
+
+      # Test PDF generation
+      - name: Verify PDF was generated correctly
+        run: |
+          test -s RESUME.pdf
+          echo "✅ PDF file exists and is not empty"
+          # Check if PDF has content (size > 10KB indicates real content)
+          size=$(stat -f%z RESUME.pdf 2>/dev/null || stat -c%s RESUME.pdf)
+          if [ "$size" -gt 10240 ]; then
+            echo "✅ PDF file appears to have content ($size bytes)"
+          else
+            echo "⚠️ PDF file seems unusually small ($size bytes)"
+            exit 1
+          fi
 
       - name: Insert PDF link after
         run: |
