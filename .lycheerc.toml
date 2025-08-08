@@ -47,8 +47,8 @@ exclude = [
 # Include only these file types
 include = ["*.md"]
 
-# Cache results for this duration (in seconds)
-cache = 3600
+# Enable caching
+cache = true
 
 # Verbose output
 verbose = true
