@@ -1,3 +1,9 @@
+### Juniper Networks Certified Associate, Mist AI (JNCIA-MistAI)
+
+2025 AUG
+
+![Juniper Networks Certified Associate, Mist AI (JNCIA-MistAI) Badge](JNCIA-MistAI.png)
+
 ### Juniper Networks Certified Associate, Junos (JNCIA-Junos)
 
 2025 MAY
