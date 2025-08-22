@@ -71,30 +71,31 @@ p {
     font-size: 11pt;
 }
 
-/* Technical skills - simplified for ATS parsing */
+/* Technical skills - balanced approach for ATS compatibility and visual appeal */
 code {
-    /* Remove background colors and borders that confuse ATS */
-    background-color: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    font-family: 'Arial', 'Calibri', sans-serif; /* Use same font as body */
-    font-size: 11pt;
-    margin: 0;
-    display: inline;
-    color: #000000;
-    font-weight: normal;
+    /* Subtle styling that maintains ATS readability while providing visual distinction */
+    background-color: #f8f8f8; /* Very light gray background - ATS friendly */
+    border: 1px solid #e0e0e0; /* Subtle border for visual separation */
+    border-radius: 3px; /* Minimal rounded corners */
+    padding: 2px 4px; /* Small padding for readability */
+    font-family: 'Arial', 'Calibri', sans-serif; /* ATS-friendly fonts */
+    font-size: 10pt; /* Slightly smaller than body text */
+    margin: 0 2px; /* Small margin between skills */
+    display: inline-block; /* Allows for proper spacing */
+    color: #000000; /* Black text for maximum contrast */
+    font-weight: 500; /* Slightly bold for emphasis */
+    white-space: nowrap; /* Prevents skill names from wrapping */
 }
 
-/* Simplify code blocks to plain text for ATS */
+/* Keep pre blocks simple for ATS while maintaining some structure */
 pre {
-    background-color: transparent;
-    border: none;
+    background-color: transparent; /* No background for pre blocks */
+    border: none; /* No border for pre blocks */
     padding: 0;
     margin: 0;
     font-family: 'Arial', 'Calibri', sans-serif;
     color: #000000;
-    white-space: normal; /* Allow wrapping */
+    white-space: normal; /* Allow normal text flow */
 }
 
 /* Clear emphasis styling */
@@ -110,17 +111,20 @@ em {
 
 /* Hide images and figures in ATS-optimized version */
 /* ATS systems often ignore images, so we make them minimal */
-img {
-    display: none; /* Hide certification badges for ATS */
-}
 
-figure {
-    display: none; /* Hide figure elements */
+/* Hide certification badges for ATS */
+/* img {
+    display: none;
+} */
+
+/* Hide figure elements */
+/* figure {
+    display: none;
 }
 
 figcaption {
     display: none;
-}
+} */
 
 /* Clean work experience styling */
 h3 strong {
@@ -130,9 +134,10 @@ h3 strong {
 }
 
 /* Remove decorative elements */
-hr {
-    display: none; /* Remove visual separators that ATS can't parse */
-}
+/* Remove visual separators that ATS can't parse */
+/* hr {
+    display: none;
+} */
 
 /* Simple list formatting */
 ul, ol {

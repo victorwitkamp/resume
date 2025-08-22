@@ -15,7 +15,7 @@ This is a personal resume repository that uses Jekyll and GitHub Pages for autom
 │   ├── Education.md        # Educational background
 │   ├── WorkExperience.md   # Professional experience
 │   ├── Certifications.md  # Professional certifications
-│   ├── PDF.css            # Styling for PDF generation
+│   ├── PDF_ATS.css            # Styling for PDF generation
 │   └── *.png              # Certificate badges and images
 └── .github/
     └── workflows/
@@ -39,7 +39,7 @@ This is a personal resume repository that uses Jekyll and GitHub Pages for autom
 ### File Relationships
 - `src/RESUME.md` serves as the main template/summary
 - Other `src/*.md` files contain detailed sections
-- `src/PDF.css` provides styling specifically for PDF output
+- `src/PDF_ATS.css` provides styling specifically for PDF output
 - `_config.yml` configures Jekyll theme and site metadata
 
 ## Development Guidelines
@@ -109,7 +109,7 @@ ISSUE_DATE
 ## Troubleshooting
 
 ### PDF Generation Issues
-- Ensure `src/PDF.css` is properly formatted CSS
+- Ensure `src/PDF_ATS.css` is properly formatted CSS
 - Check that all image paths are correct and files exist
 - Verify `wkhtmltopdf` can access local files (--enable-local-file-access flag)
 
