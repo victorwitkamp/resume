@@ -2,6 +2,8 @@
 
 2025 AUG
 
+[Juniper Networks Certified Associate, Mist AI (JNCIA-MistAI - Credly](https://www.credly.com/badges/87318a66-b65e-4401-97fe-40635adffb14)
+
 ![Juniper Networks Certified Associate, Mist AI (JNCIA-MistAI) Badge](JNCIA-MistAI.png)
 
 ### Juniper Networks Certified Associate, Junos (JNCIA-Junos)
