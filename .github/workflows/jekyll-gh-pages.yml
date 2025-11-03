@@ -38,7 +38,7 @@ jobs:
         continue-on-error: true
 
       - name: Update README
-        uses: abhinav/stitchmd-action@v1
+        uses: abhinav/stitchmd-action@v2
         with:
           mode: write
           summary: src/RESUME.md
