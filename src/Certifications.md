@@ -1,3 +1,19 @@
+### Juniper Networks Certified Specialist, Security (JNCIS-SEC)
+
+2026 JAN
+
+[Juniper Networks Certified Specialist, Security (JNCIS-SEC - Credly)](https://www.credly.com/badges/2370b2bc-e2b8-4be8-8b75-8cb75939512b)
+
+![Juniper Networks Certified Specialist, Security (JNCIS-SEC) Badge](JNCIS-SEC.png)
+
+### Juniper Networks Certified Associate, Security (JNCIA-SEC)
+
+2026 JAN
+
+[Juniper Networks Certified Associate, Security (JNCIA-SEC - Credly)](https://www.credly.com/badges/c206b190-16b7-41ec-a949-1cb96082ca24)
+
+![Juniper Networks Certified Associate, Security (JNCIA-SEC) Badge](JNCIA-SEC.png)
+
 ### Juniper Networks Certified Associate, Mist AI (JNCIA-MistAI)
 
 2025 AUG
