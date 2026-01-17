@@ -246,8 +246,14 @@ h3 + p {
 }
 
 /* Certification section heading */
+/* First h3 after h2 (first item in section) gets reduced top margin */
 h2 + h3 {
     margin-top: 8pt; /* Reduce space after section heading */
+}
+
+/* More specific certification entry spacing */
+h3:first-of-type {
+    margin-top: 8pt; /* Ensure first certification has proper spacing */
 }
 
 /* Education section */
@@ -320,9 +326,20 @@ body * {
     }
     
     /* Keep certification entries together */
-    .certification,
-    h3 + p + p {
+    /* Avoid page breaks within certification entries and their immediate content */
+    .certification {
         page-break-inside: avoid !important;
+    }
+    
+    /* Keep h3 headings with their following content */
+    h3 {
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
+    }
+    
+    /* Keep paragraphs following headings together */
+    h3 + p {
+        page-break-before: avoid !important;
     }
     
     /* Ensure proper spacing in print */
