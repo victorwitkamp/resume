@@ -1,33 +1,19 @@
 # Build artifacts
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-
-# Auto-generated files (should not be committed)
-README.md
-
-# Node.js dependencies (for local testing)
-node_modules/
-package.json
-package-lock.json
-
-# Temporary PDF/HTML test files
+RESUME.html
+RESUME.pdf
 RESUME_*.pdf
-RESUME_*.html
-*_test.pdf
-*_test.html
 
-# OS files
-.DS_Store
-Thumbs.db
+# Image conversions and comparisons
+page-*.png
+comparison-*.png
 
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
+# Temporary files
+*.tmp
+/tmp/
 
-# Local development
-.bundle/
-vendor/
+# Copied certification images in root (originals are in src/)
+/*.png
+!src/*.png
+
+# Node modules if any
+node_modules/
