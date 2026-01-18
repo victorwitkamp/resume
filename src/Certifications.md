@@ -14,6 +14,14 @@
 
 ![Juniper Networks Certified Associate, Security (JNCIA-SEC) Badge](JNCIA-SEC.png)
 
+### JNCIA x 3
+
+2026 JAN
+
+[JNCIA x 3 - Credly](https://www.credly.com/badges/f5ce164f-8d57-4746-b941-24c282932db4)
+
+![JNCIA x 3 Badge](JNCIA-x3.png)
+
 ### Juniper Networks Certified Associate, Mist AI (JNCIA-MistAI)
 
 2025 AUG
