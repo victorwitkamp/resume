@@ -7,9 +7,8 @@ _site/
 # Auto-generated files (should not be committed)
 README.md
 
-# Node.js dependencies (for local testing)
+# Node.js dependencies and lockfile (for local testing)
 node_modules/
-package.json
 package-lock.json
 
 # Temporary PDF/HTML test files
@@ -17,6 +16,8 @@ RESUME_*.pdf
 RESUME_*.html
 *_test.pdf
 *_test.html
+*_final.pdf
+*_final.html
 
 # OS files
 .DS_Store
