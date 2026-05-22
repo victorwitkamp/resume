@@ -1,24 +1,19 @@
-/* ATS-Friendly PDF Layout for Resume */
-/* Optimized for Applicant Tracking Systems */
-
 @page {
     margin: 0.75in;
     size: A4;
 }
 
 body {
-    /* Use standard, widely available fonts that ATS systems can read */
     font-family: 'Arial', 'Calibri', 'Helvetica', sans-serif;
     line-height: 1.4;
-    color: #000000; /* Pure black for best contrast and readability */
+    color: #000000;
     max-width: 8.27in;
     margin: 0 auto;
     padding: 0;
-    font-size: 11pt; /* Standard readable size */
-    background-color: #ffffff; /* Ensure white background */
+    font-size: 11pt;
+    background-color: #ffffff;
 }
 
-/* Clear, simple typography hierarchy for ATS parsing */
 h1 {
     color: #000000;
     font-size: 18pt;
@@ -27,8 +22,7 @@ h1 {
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1pt;
-    /* Remove decorative elements that ATS can't parse */
+    letter-spacing: 0;
     border: none;
     padding: 0;
 }
@@ -40,7 +34,6 @@ h2 {
     margin-bottom: 8pt;
     font-weight: bold;
     text-transform: uppercase;
-    /* Remove decorative borders and colors */
     border: none;
     padding: 0;
     page-break-after: avoid;
@@ -57,48 +50,42 @@ h3 {
     padding: 0;
 }
 
-/* Simple, clean link styling */
 a {
-    color: #000000; /* Keep links black for ATS compatibility */
+    color: #000000;
     text-decoration: underline;
 }
 
-/* Standard paragraph formatting */
 p {
     margin-bottom: 6pt;
-    text-align: left; /* Avoid justify as it can cause parsing issues */
+    text-align: left;
     color: #000000;
     font-size: 11pt;
 }
 
-/* Technical skills - balanced approach for ATS compatibility and visual appeal */
 code {
-    /* Subtle styling that maintains ATS readability while providing visual distinction */
-    background-color: #f8f8f8; /* Very light gray background - ATS friendly */
-    border: 1px solid #e0e0e0; /* Subtle border for visual separation */
-    border-radius: 3px; /* Minimal rounded corners */
-    padding: 2px 4px; /* Small padding for readability */
-    font-family: 'Arial', 'Calibri', sans-serif; /* ATS-friendly fonts */
-    font-size: 10pt; /* Slightly smaller than body text */
-    margin: 0 2px; /* Small margin between skills */
-    display: inline-block; /* Allows for proper spacing */
-    color: #000000; /* Black text for maximum contrast */
-    font-weight: 500; /* Slightly bold for emphasis */
-    white-space: nowrap; /* Prevents skill names from wrapping */
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    font-family: 'Arial', 'Calibri', sans-serif;
+    font-size: 11pt;
+    margin: 0;
+    display: inline;
+    color: #000000;
+    font-weight: normal;
+    white-space: normal;
 }
 
-/* Keep pre blocks simple for ATS while maintaining some structure */
 pre {
-    background-color: transparent; /* No background for pre blocks */
-    border: none; /* No border for pre blocks */
+    background-color: transparent;
+    border: none;
     padding: 0;
     margin: 0;
     font-family: 'Arial', 'Calibri', sans-serif;
     color: #000000;
-    white-space: normal; /* Allow normal text flow */
+    white-space: normal;
 }
 
-/* Clear emphasis styling */
 strong {
     font-weight: bold;
     color: #000000;
@@ -109,37 +96,18 @@ em {
     color: #000000;
 }
 
-/* Hide images and figures in ATS-optimized version */
-/* ATS systems often ignore images, so we make them minimal */
-
-/* Hide certification badges for ATS */
-/* img {
-    display: none;
-} */
-
-/* Hide figure elements */
-/* figure {
-    display: none;
+img,
+figure,
+figcaption {
+    display: none !important;
 }
 
-figcaption {
-    display: none;
-} */
-
-/* Clean work experience styling */
 h3 strong {
     font-size: 12pt;
     color: #000000;
     font-weight: bold;
 }
 
-/* Remove decorative elements */
-/* Remove visual separators that ATS can't parse */
-/* hr {
-    display: none;
-} */
-
-/* Simple list formatting */
 ul, ol {
     margin-bottom: 8pt;
     padding-left: 20pt;
@@ -150,13 +118,10 @@ li {
     color: #000000;
 }
 
-/* Ensure consistent spacing */
 section {
     margin-bottom: 16pt;
 }
 
-/* Date formatting - make it clear and parseable */
-/* Style for date ranges in work experience */
 h3 + p {
     font-weight: normal;
     color: #000000;
@@ -164,7 +129,6 @@ h3 + p {
     font-style: italic;
 }
 
-/* Page break controls */
 .page-break {
     page-break-before: always;
 }
@@ -173,7 +137,6 @@ h3 + p {
     page-break-inside: avoid;
 }
 
-/* Ensure all text is selectable and copyable for ATS */
 * {
     -webkit-user-select: text;
     -moz-user-select: text;
@@ -181,7 +144,6 @@ h3 + p {
     user-select: text;
 }
 
-/* Contact information styling (if present) */
 .contact-info {
     text-align: center;
     margin-bottom: 16pt;
@@ -193,7 +155,6 @@ h3 + p {
     margin: 2pt 0;
 }
 
-/* Skills section optimization */
 .skills-list {
     margin-bottom: 8pt;
 }
@@ -211,7 +172,6 @@ h3 + p {
     content: "";
 }
 
-/* Professional experience optimization */
 .job-title {
     font-style: italic;
     font-weight: normal;
@@ -229,7 +189,6 @@ h3 + p {
     margin-bottom: 8pt;
 }
 
-/* Certification styling - text only */
 .certification {
     margin-bottom: 12pt;
 }
@@ -244,7 +203,6 @@ h3 + p {
     margin-bottom: 4pt;
 }
 
-/* Education section */
 .education-item {
     margin-bottom: 12pt;
 }
@@ -264,12 +222,10 @@ h3 + p {
     color: #000000;
 }
 
-/* Ensure proper text flow and readability */
 body * {
     box-sizing: border-box;
 }
 
-/* Make sure all content is visible and parseable */
 .hidden {
     display: block !important;
     visibility: visible !important;
