@@ -1,3 +1,14 @@
+### **Kyndryl**
+
+2025 DEC - PRESENT
+
+***Infrastructure Specialist***
+
+```Juniper SRX```
+```Juniper EX```
+```Nutanix```
+___
+
 ### **IP-SecurITy b.v.**
 
 2025 FEB - 2025 JUN
