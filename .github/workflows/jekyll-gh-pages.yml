@@ -18,7 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Install markdownlint-cli
         run: npm install -g markdownlint-cli
@@ -38,7 +38,7 @@ jobs:
         continue-on-error: true
 
       - name: Update README
-        uses: abhinav/stitchmd-action@v1
+        uses: abhinav/stitchmd-action@v2
         with:
           mode: write
           summary: src/RESUME.md
@@ -60,7 +60,7 @@ jobs:
           ' README.md
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
@@ -75,7 +75,7 @@ jobs:
         run: cp RESUME.pdf _site/RESUME.pdf
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
 
   deploy:
     environment:
@@ -86,4 +86,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
