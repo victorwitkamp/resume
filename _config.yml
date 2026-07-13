@@ -24,8 +24,13 @@ social:
 
 exclude:
   - RESUME.html
+  - RESUME_ATS.html
+  - RESUME_ATS.md
+  - Victor-Witkamp-Resume-ATS.pdf
   - .github/
+  - src/Header.md
   - src/RESUME.md
+  - src/RESUME_ATS.md
   - src/Introduction.md
   - src/Education.md
   - src/Certifications.md

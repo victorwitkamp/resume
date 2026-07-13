@@ -6,6 +6,8 @@ _site/
 
 # Auto-generated files (should not be committed)
 README.md
+/RESUME_ATS.md
+/Victor-Witkamp-Resume-ATS.pdf
 
 # Node.js dependencies (for local testing)
 node_modules/

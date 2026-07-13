@@ -1,0 +1,30 @@
+---
+---
+
+@import "jekyll-theme-slate";
+
+h1 + p {
+  font-style: normal;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+h4 + ul,
+h3 + p + ul {
+  list-style: none;
+  margin: 0.25rem 0 0.75rem;
+  padding: 0;
+}
+
+h4 + ul li,
+h3 + p + ul li {
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 0.25rem;
+  display: inline-block;
+  margin: 0 0.25rem 0.25rem 0;
+  max-width: 100%;
+  padding: 0.15rem 0.5rem;
+  vertical-align: top;
+  white-space: normal;
+}
