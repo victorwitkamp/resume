@@ -31,7 +31,7 @@ h1 {
 h2 {
     border: 0;
     font-size: 14pt;
-    margin: 14pt 0 6pt;
+    margin: 18pt 0 6pt;
     padding: 0;
     text-transform: uppercase;
 }
@@ -57,6 +57,10 @@ h1 + p {
 a {
     color: #000000;
     text-decoration: underline;
+}
+
+a[href*="credly.com"] {
+    display: none;
 }
 
 p {
@@ -112,8 +116,42 @@ img {
     display: none;
 }
 
+#certifications > section.level3 {
+    break-inside: avoid;
+    min-height: 38pt;
+    padding-right: 44pt;
+    page-break-inside: avoid;
+    position: relative;
+}
+
+#certifications figure {
+    display: block;
+    height: 36pt;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 36pt;
+}
+
+#certifications figure img {
+    display: block;
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+
+#certifications figcaption {
+    display: none;
+}
+
 section.level2 {
-    margin-bottom: 10pt;
+    margin-bottom: 14pt;
+}
+
+#work-experience > section.level3 {
+    break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 * {
