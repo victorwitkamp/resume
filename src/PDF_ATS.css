@@ -59,10 +59,6 @@ a {
     text-decoration: underline;
 }
 
-a[href*="credly.com"] {
-    display: none;
-}
-
 p {
     margin: 0 0 6pt;
     orphans: 3;
@@ -121,16 +117,13 @@ img {
     min-height: 38pt;
     padding-right: 44pt;
     page-break-inside: avoid;
-    position: relative;
 }
 
 #certifications figure {
     display: block;
+    float: right;
     height: 36pt;
-    margin: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+    margin: -42pt -44pt 0 0;
     width: 36pt;
 }
 
