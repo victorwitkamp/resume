@@ -100,10 +100,6 @@ problems with existing customers and helping with the installation of new custom
 such as implementing relocations, concluding new subscriptions (sales) and answering questions about the contract
 or invoices.
 
-## ALBERT HEIJN
-
-Barendrecht, Netherlands · 2010 – 2014
-
 ## DISPLAY4ALL
 
 Heerjansdam, Netherlands · 2011 – 2013
