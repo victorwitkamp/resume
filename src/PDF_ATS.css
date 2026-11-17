@@ -150,3 +150,9 @@ section.level2 {
 * {
     box-sizing: border-box;
 }
+
+#certifications,
+#work-experience {
+    break-after: page;
+    page-break-after: always;
+}
