@@ -1,5 +1,5 @@
 - [Download the ATS-friendly PDF](https://victorwitkamp.github.io/resume/Victor-Witkamp-Resume-ATS.pdf)
 - [Introduction](Introduction.md)
-- [Education](Education.md)
 - [Certifications](Certifications.md)
 - [Work Experience](WorkExperience.md)
+- [Education](Education.md)
