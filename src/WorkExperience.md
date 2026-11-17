@@ -2,13 +2,21 @@
 
 Hoofddorp, Netherlands · 2025 DEC - PRESENT
 
-### Infrastructure Specialist
+### Lead, Infrastructure Specialist
 
 - Juniper SRX
 - Juniper EX
 - Nutanix
 - Kubernetes
+- Helm
 - Ansible
+- Argo Workflows
+- GitLab CI/CD
+- Docker
+- HashiCorp Vault / OpenBao
+- NetBox
+- RADIUS
+- Python
 
 ## IP-SECURITY B.V.
 
